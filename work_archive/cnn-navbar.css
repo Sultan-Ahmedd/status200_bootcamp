@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}   
+body {
+    font-family: Arial, sans-serif;
+}
+
+.master-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: black; /* Ensure background color is black */
+    padding: 3px 20px;
+}
+
+/* Debugging background-color */
+.master-nav {
+    background-color: black;
+}
+
+.float-left {
+    font-weight: bold;
+}
+
+.float-left, .float-right {
+    display: flex;
+}
+
+.float-left ul, .float-right ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.float-left ul li, .float-right ul li {
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.float-left ul li a, .float-right ul li a {
+    color: rgb(230, 223, 223);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+.float-left a {
+    transition: 0.3s;
+}
+
+.float-left a:hover {
+    color: white;
+}
+
+.float-left a, .float-right a {
+    vertical-align: bottom;
+}
+
+.float-left ul li a:hover, .float-right ul li a:hover {
+    color: white;
+}
+
+.hover-gray-menu {
+    max-height: 20px;
+}
+
+.float-left ul li, .float-right ul li {
+    max-height: 40px;
+}
+
+.float-left img, .float-right img {
+    max-height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#sign-in {
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+#sign-in:hover {
+    background-color: gray;
+}

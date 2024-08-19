@@ -1,0 +1,41 @@
+body{
+    background-color: rgb(4, 2, 16);
+}
+.tasklist-container{
+    text-align: center;
+    color: white;
+    font-family: arial;
+}
+.submission-task label{
+    color: white;
+    font-family: arial;
+    font-weight: bold;
+}
+.submission-task input{
+    margin-left: 5px;
+    background-color: rgb(100, 244, 167);
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+.submission-task button{
+    background-color: rgb(100, 244, 167);
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px;
+    transition: 0.3s;
+}
+.submission-task button:focus{
+    border: 2px solid white;
+}
+.submission-task{
+    padding: 5px;
+    border-radius: 7px;
+    margin-left: 3px;
+    position: fixed;
+}
+#list-tasks{
+    color: white;
+    list-style-type: none;
+}

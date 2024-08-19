@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="toDoList_styling.css" />
+    <title>To Do List - WebApp</title>
+  </head>
+  <body>
+    <div class="tasklist-container">
+      <h1 id="task-heading">Tasks:</h1>
+      <ul id="list-tasks"></ul>
+    </div>
+    <form class="submission-task" onsubmit="return addTask()">
+        <label for="tasksubmit">New Task:</label>
+        <input id="tasksubmit" type="text" placeholder="Enter new task">
+        <button id="submission">Submit new task!</button>
+    </form>
+    <script src="toDoList_app.js"></script>
+  </body>
+</html>

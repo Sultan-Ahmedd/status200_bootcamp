@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Simple Translator</h1>
+    <input type="text" id="user_input">
+    <button onclick="englishToFrench()">English to French</button>
+    <button onclick="frenchToEnglish()">French to English</button>
+</body>
+<script>
+    const englishToFrench = {
+        "hello": "bonjour",
+        "goodbye": "au revoir",
+        "please": "s'il vous plait",
+        "thank you": "merci",
+        "yes": "oui",
+        "no": "non",
+        "dog": "chien",
+        "cat": "chat",
+        "house": "maison",
+        "car": "voiture",
+    }
+    const frenchToEnglish = {
+        "bonjour": "hello",
+        "au revoir": "goodbye",
+        "s'il vous plait": "please",
+        "merci": "thank you",
+        "oui": "yes",
+        "non": "no",
+        "chien": "dog",
+        "chat": "cat",
+        "maison": "house",
+        "voiture": "car"
+}
+function englishToFrench() {
+    let userInput = document.getElementById("user_input").value;
+
+    for (let i = 0; i < englishToFrench.length; i++) {
+        const translateInput = document.getElementById("user_input").value.trim().toLowerCase();
+        const translation = englishToFrench[word]
+
+
+    }
+}
+</script>
+</html>

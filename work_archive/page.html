@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="teachers_name">Favourite Teacher</label>
+    <input type="text" id="teachers_name" />
+    <br />
+    <button onclick="favTeacher()">Add Favourite Teacher</button>
+    <p id="output"></p>
+  </body>
+  <script>
+    // function favTeacher() {
+    // var teachers = ["Ferry", "Karel"];
+    // var teachers_name = document.getElementById("teachers_name").value;
+    
+    // teachers.push(teachers_name);
+
+    // var output_sentence =
+    //   "My favourite teacher is " +
+    //   teachers[1] +
+    //   " but " +
+    //   teachers[0] +
+    //   " is also okay" + " and "
+
+    // document.getElementById("output").innerHTML = output_sentence + teachers[2];
+    // }
+    function favTeacher() {
+        var teachers = ["Ferry", "Karel"];
+        var output_text = "My favourite teacher is ";
+
+        teachers[2] = document.getElementById("teachers_name").value;
+        
+        document.getElementById("output").innerHTML = output_text + teachers;
+    }
+  </script>
+</html>

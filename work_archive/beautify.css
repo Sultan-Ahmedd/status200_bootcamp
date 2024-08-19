@@ -1,0 +1,28 @@
+body {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+button {
+    background-color: black;
+    color: white;
+    font-family: Arial;
+    font-weight: bold;
+    border-radius: 10px;
+}
+button:focus {
+    border: 2px solid cyan;
+}
+input {
+    border-radius: 5px;
+}
+label {
+    font-family: Arial;
+    font-weight: bold;
+}
+p {
+    font-family: Arial;
+    font-weight: bold;
+}

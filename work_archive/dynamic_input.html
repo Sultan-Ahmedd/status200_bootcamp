@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Input</title>
+  </head>
+  <body>
+    <label for="Teacher">Teacher Name</label>
+    <input type="text" id="Teacher" />
+    <br>
+    <label for="Teacher_Age">Teacher Age</label>
+    <input type="number" id="Teacher_Age"><br>
+    <button onclick="addDataToArray()">Submit</button>
+    <button onclick="displayTeachers()">Display Name and Age</button><br>
+    <p id="arrayOutput"></p>
+    <script>
+      var teachers = [];
+      function addDataToArray() {
+        var teacherName = document.getElementById("Teacher").value;
+        var teacherAge = document.getElementById("Teacher_Age").value;
+        teachers.push({ name: teacherName, age: teacherAge });
+        document.getElementById("Teacher").value = ""; // Clear the input field
+        document.getElementById("Teacher_Age").value = ""; // Clear the input field
+      }
+      function displayTeachers() {
+        var output = "Name and age of teachers:<br>";
+        for (let index = 0; index < teachers.length; index++) {
+          output += "Teacher " + (index + 1) + ": " + teachers[index].name + ", Age: " + teachers[index].age + "<br>";
+        }
+        document.getElementById("arrayOutput").innerHTML = output;
+      }
+    </script>
+  </body>
+</html>

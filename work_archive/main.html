@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="beautify.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <label for="upperBound">Please write the upper bound</label>
+    <input id="upperBound" type="number" /><br />
+    <label for="lowerBound">Please write the lower bound</label>
+    <input id="lowerBound" type="number" />
+    <button onclick="upperlowerBound()">Click</button> -->
+    <label for="nameInp">Name</label>
+    <input id="nameInp" type="text" /><br />
+    <label for="ageInp">Age</label>
+    <input id="ageInp" type="number" /><br />
+    <label for="professionInp">Profession</label>
+    <input id="professionInp" type="text" /><br />
+    <button onclick="storeInfoInArrays()">Submit</button>
+    <button onclick="displayInfo()">Display!</button>
+    <br>
+    <button onclick="averageAge()">Average Age</button>
+    <button onclick="infoOfAbove40()">Names and Professions of people above 40 years old</button>
+    <p id="demo"></p>
+    <p id="average"></p>
+    <p id="info_40"></p>
+  </body>
+  <script>
+      names = [];
+      ages = [];
+      professions = [];
+    function storeInfoInArrays() {
+
+      var nameInput = document.getElementById("nameInp").value;
+      var ageInp = parseInt(document.getElementById("ageInp").value);
+      var professionInp = document.getElementById("professionInp").value;
+
+      names.push(nameInput);
+      ages.push(ageInp);
+      professions.push(professionInp);
+    }
+    function displayInfo() {
+        var displayMessage = document.getElementById("demo");
+
+        for(let i = 0; i < names.length; i++) {
+            displayMessage.innerHTML += "Name: " + names[i] + " Age: " + ages[i] + " Profession: " + professions[i] + "<br>";
+        }
+    }
+    function averageAge() {
+        let sum = 0;
+        for(let i = 0; i < ages.length; i++)
+        sum += ages[i];
+        document.getElementById("average").innerHTML = "Average ages: " + sum / ages.length;
+    }
+    function infoOfAbove40() {
+        let info = "";
+        for(let i = 0; i < names.length; i++) {
+            if (ages[i] > 40) {
+                info += "People older than 40:" + "<br>" + "Name: " + names[i] + " Profession: " + professions[i] + "<br>"
+                document.getElementById("info_40").innerHTML = info;
+            }
+        }
+    }
+
+    // function upperlowerBound() {
+    //   var lowerBound = parseInt(document.getElementById("lowerBound").value);
+    //   var upperBound = parseInt(document.getElementById("upperBound").value);
+    //   var output = "";
+
+    //   for (let i = lowerBound; i <= upperBound; i++) {
+    //     if (i % 2 === 0) {
+    //       output += i + "<br>";
+    //     }
+    //   }
+    //   document.getElementById("demo").innerHTML = output;
+    // }
+
+    // let names = ["Alice", "Ela", "Ece"]
+    // let ages = [12, 17, 25]
+    // let grades = ["E", "A+", "B"]
+
+    // for (i = 0; i < names.length; i++) {
+    //     console.log(`Name ${names[i]} Age ${ages[i]} Grades ${grades[i]}`)
+    // }
+  </script>
+</html>

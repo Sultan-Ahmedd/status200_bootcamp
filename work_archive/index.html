@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="login_div">
+      <h2>Login</h2>
+      <label for="username">Username</label>
+      <input id="username" type="text" /><br />
+      <label for="password">Password</label>
+      <input id="password" type="password" /><br />
+      <button onclick="login()">Login</button>
+    </div>
+
+    <div id="ButtonDiv">
+      <button onclick="showAnimal('cat')">Show Cat</button>
+      <button onclick="showAnimal('dog')">Show Dog</button>
+      <button onclick="showAnimal('dinasour')">Show Dinasour</button>
+    </div>
+
+    <div class="animals">
+      <div id="CatDiv" class="animalDiv">
+        <h3>Cat</h3>
+        <img src="./animalImages/cat.jpg" alt="cat" />
+        <p>This is a cute cat</p>
+      </div>
+      <div id="DogDiv" class="animalDiv">
+        <h3>Dog</h3>
+        <img src="./animalImages/dog.jpg" alt="cat" />
+        <p>This is a friendly dog</p>
+      </div>
+      <div id="DinoDiv" class="animalDiv">
+        <h3>Dinasour</h3>
+        <img src="./animalImages/dino.jpg" alt="cat" />
+        <p>This is a mighty dinasour</p>
+      </div>
+    </div>
+    <script>
+        const usernames = ["Sultan", "Ela"];
+        const passwords = ["password1", "password2"];
+        let isLoggedIn = false;
+        
+      function login() {
+        var loginDiv = document.getElementById("login_div");
+        if (
+          loginDiv.style.display === "none" ||
+          loginDiv.style.display === ""
+        ) {
+          loginDiv.style.display = "block"; // Show the login div
+        } else {
+          loginDiv.style.display = "none"; // Hide the login div
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+#parent-div{
+    display: flex;
+    justify-content: center;
+}
+#left-child-div{
+    float: left;
+
+}
+#right-child-div{
+    float: right;
+}

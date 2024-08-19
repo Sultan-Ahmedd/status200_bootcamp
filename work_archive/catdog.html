@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cat Dog</title>
+    <style>
+      .animal-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 450px;
+        gap: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1cm;
+      }
+
+      .animal-container img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover; /* Prevents Distortion */
+        border-radius: 10px;
+      }
+
+      .animal-container img:nth-child(odd) {
+        margin-left: auto;
+      }
+
+      .animal-container img:nth-child(even) {
+        margin-right: auto;
+      }
+
+      .dogs,
+      .cats {
+        display: block;
+      }
+
+      button {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 5px;
+        background-color: black;
+        color: white;
+        padding: 10px;
+      }
+      .span {
+        width: 200px;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- even image -->
+    <!-- odd image -->
+    <div class="animal-container">
+      <div class="span">
+        <img class="dogs" src="dog.jpeg" /> <!-- even image -->
+      </div>
+      <div class="span">
+        <img class="cats" src="cat.jpg" /> <!-- odd image -->
+      </div>
+      <div class="span">
+        <img class="cats" src="cat.jpg" /> <!-- even image -->
+      </div>
+      <div class="span">
+        <img class="dogs" src="dog.jpeg" /> <!-- odd image -->
+      </div>
+      <div class="span">
+        <img class="dogs" src="dog.jpeg" /> <!-- even image -->
+      </div>
+      <div class="span">
+        <img class="cats" src="cat.jpg" /> <!-- odd image -->
+      </div>
+      <div class="span">
+        <img class="cats" src="cat.jpg" /> <!-- even image -->
+      </div>
+      <div class="span">
+        <img class="dogs" src="dog.jpeg" /> <!-- odd image -->
+      </div>
+    </div>
+    <button onclick="showHide('cats')">Show/Hide Cats</button>
+    <button onclick="showHide('dogs')">Show/Hide Dogs</button>
+
+    <script>
+      function showHide(animalType) {
+        const images = document.getElementsByClassName(animalType);
+
+        for (let i = 0; i < images.length; i++) {
+          if (images[i].style.display === "none") {
+            images[i].style.display = "block";
+          } else {
+            images[i].style.display = "none";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

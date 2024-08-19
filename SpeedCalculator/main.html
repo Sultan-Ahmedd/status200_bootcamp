@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js"></script>
+    <title>Speed Calculator</title>
+  </head>
+  <body>
+    <form id="speed-form" onsubmit="return speedCalc();"">
+      <label for="distance">Distance (km)</label>
+      <input id="distance" type="number" />
+      <br />
+      <label for="time">Time (hours)</label>
+      <input id="time" type="number" />
+      <br />
+      <button id="submit-button" type="submit">
+        Calculate my speed
+      </button>
+    </form>
+    <h1 id="speed-display"></h1>
+  </body>
+</html>

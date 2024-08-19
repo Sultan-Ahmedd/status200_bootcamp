@@ -1,0 +1,78 @@
+#banner{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#cyber_pilot{
+    float: left;
+}
+#internet_offline{
+    float: right;
+}
+#geocities_heading{
+    text-align: center;
+}
+.symbol_mean{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#geocities-background{
+    font-size: 36px;
+    word-spacing: 150px;
+}
+.image-geocities{
+    position: absolute;
+    margin-bottom: 20px;
+}
+#geocities-photo{
+    margin-left: 83px;
+    width: 150px;
+    height: 60px;
+    transform: translateY(-42px);
+}
+.geocities-entry{
+    transform: translateX(14cm);
+}
+.opinions{
+    transform: translateY(-50px);
+}
+.stupid_line{
+    transform: translateY(-56px);
+    margin-bottom: 120px;
+}
+#takestock{
+    transform: translateY(-4cm);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.chance_win{
+    transform: translateY(-4cm);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.another_stupid_line{
+    transform: translateY(-4cm);
+    margin-bottom: 120px;
+}
+body{
+    overflow-x: hidden;
+}
+#footer{
+    display: flex;
+    text-wrap: wrap;
+    justify-content:center;
+    transform: translateY(-7cm);
+}
+#copyright{
+    display: flex;
+    transform: translateY(-7cm);
+    justify-content: center;
+}   

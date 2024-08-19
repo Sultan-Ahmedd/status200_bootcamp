@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="atmProject_styles.css" />
+    <script src="script.js" defer></script>
+    <title>ATM - Withdraw</title>
+  </head>
+  <body onload="ReadNotesStackSize()">
+    <div class="atm-heading">
+      <img class="left-image" width="120" height="85" src="https://logos-world.net/wp-content/uploads/2021/02/US-Bank-Logo.png">
+      <h1 id="atm-title">ATM Simulator</h1>
+      <img id="right-image" width="50" height="65" src="https://companieslogo.com/img/orig/5819.KL-a46d3378.png?t=1720244490">
+    </div>
+    <div class="ATM-body">
+      <h1 class="machineTitle">ATM - Withdrawal</h1>
+      <div class="ATM-screen">
+        <div class="withdraw-container">
+          <p id="notesstack">Available Notes:</p>
+          <label for="withdraw-input">Please specify the withdrawal amount</label>
+          <input id="withdraw-input" type="number">
+          <button onclick="amountValidation()">Check Amount</button>
+          <p id="errorPara"></p>
+          <button onclick="showDenominationsOfNotes()" id="show-denominations">Withdraw</button>
+          <p id="notes_dispensed"></p>
+        </div>
+      </div>
+      <div class="ATM-buttons">
+        <button><a href="withdraw.html">Withdraw</a></button>
+        <button><a href="deposit.html">Deposit</a></button>
+        <button><a href="balance.html">Balance</a></button>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+body{
+    background-color: white;
+}
+.heading-title{
+    font-family: arial;
+    color: white;
+    text-align: center;
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.heading-title:hover{
+    background-color: rgb(33, 37, 37);
+}
+.bmi-intro{
+    font-family: arial;
+    color: black;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.bmi-calculator {
+    font-family: Arial;
+    font-weight: bold;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+    width: 15%;
+}
+button{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 12px;
+    color: white;
+    background-color: rgb(43, 43, 48);
+    transition: 0.3s;
+    padding: 5px;
+}
+button:focus{
+    background-color: rgb(108, 218, 233);
+    border: 2px solid rgb(102, 216, 245);
+}
+#bmiDisplay{
+    text-align: center;
+    font-family: Arial;
+}
+input{
+    border-radius: 12px;
+    padding: 10px;
+    margin-top: 3px;
+}
+form{
+    margin-top: 1cm;
+}
+#errorMessage{
+    text-align: center;
+    font-family: Arial;
+}
+body p a {
+    font-weight: bold;
+    color: rgb(0, 57, 57);
+}
+body p a::after{
+    color: rgb(0, 57, 57);
+}
+#inp_unitsystem{
+    float: right;
+    padding: 5px;
+    color: white;
+    background-color: rgb(34, 33, 33);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+#inp_weightunitsystem {
+    float: left;
+    padding: 5px;
+    color: white;
+    background-color: rgb(34, 33, 33);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+#inp_unitsystem:hover, #inp_weightunitsystem:hover{
+    background-color: rgb(66, 64, 64);
+}
+.helper-text{
+    color: gray;
+    font-size: 12px;
+}
+.warning-text{
+    color: red;
+    font-size: 12px;
+}

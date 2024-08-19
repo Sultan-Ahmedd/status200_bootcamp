@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="bmi-styles.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://play-lh.googleusercontent.com/yaprjgfpT07cf7miL6M_UmXP4ElLqtcVCRc8jXqaUyzhvmEx3GVhecBeA3l7HOO1TBOn"
+    />
+    <title>BMI Checker - Project</title>
+  </head>
+  <body>
+    <h1 class="heading-title">Body Mass Index</h1>
+    <h1 class="heading-title">BMI Calculator</h1>
+    <p class="bmi-intro">
+      For more information, visit
+      <span
+        ><a
+          target="_blank"
+          href="https://my.clevelandclinic.org/health/articles/9464-body-mass-index-bmi"
+          >visit this website.</a
+        ></span
+      >
+      <br />
+      BMI is a measurement of a person's leanness or corpulence based on their
+      height and weight, and is intended to quantify tissue mass. It is widely
+      used as a general indicator of whether a person has a healthy body weight
+      for their height. Specifically, the value obtained from the calculation of
+      BMI is used to categorize whether a person is underweight, normal weight,
+      overweight, or obese depending on what range the value falls between.
+      These ranges of BMI vary based on factors such as region and age, and are
+      sometimes further divided into subcategories such as severely underweight
+      or very severely obese. Being overweight or underweight can have
+      significant health effects, so while BMI is an imperfect measure of
+      healthy body weight, it is a useful indicator of whether any additional
+      testing or action is required. Refer to the table below to see the
+      different categories based on BMI that are used by the calculator.
+    </p>
+    <form class="bmi-calculator">
+      <!-- Getting name -->
+       <label for="name">Enter your name</label>
+       <p class="helper-text">Name must only have letters and spaces</p>
+       <p class="warning-text" id="text-warning"></p>
+       <input id="name" type="text">
+      <!-- Getting weight input -->
+      <label for="weight" id="weight_label">Enter your weight (kgs - Default)</label>
+      <p class="helper-text">Weight must be between 30 kg to 150 kg or 67 pounds to 331 pounds </p>
+      <p class="warning-text" id="weight-warning"></p>
+      <input id="weight" type="number" onkeyup="clearWarnings('weight')" />
+      <br />
+      <!-- Getting height input -->
+      <label id="height_label" for="height"">Enter your height (cm - Default)</label>
+      <p class="helper-text">Height must be between 0.4 meters to 2.5 meters </p>
+      <p class="warning-text" id="height-warning"></p>
+      <input id="height" type="number" onkeyup="clearWarnings('height')"/>
+      <label for="decimal-places">Decimal places</label>
+      <p class="helper-text">Decimal places must be between 0 to 9</p>
+      <p class="warning-text" id="decimal-warning"></p>
+      <input id="decimal-places" type="number" onkeyup="clearWarnings('decimalPlaces')" />
+    </form>
+    <br />
+    <button onclick="bmiFunction()" type="submit">
+      Show me my BMI! (please)
+    </button>
+
+    <h1 id="bmiDisplay"></h1>
+    <h1 id="errorMessage"></h1>
+    <select id="inp_unitsystem">
+      <option value="centimeters">Centimeters</option>
+      <option value="inches">Inches</option>
+      <option value="meters">Meters</option>
+    </select>
+    <select id="inp_weightunitsystem">
+      <option value="kilograms">Kilograms</option>
+      <option value="pounds">Pounds</option>
+    </select>
+    <script src="bmi-app.js"></script>
+    <script src="rounder.js"></script>
+    <script src="loaded-content.js"></script>
+    <script src="conversion.js"></script>
+  </body>
+</html>

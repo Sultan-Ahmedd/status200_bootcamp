@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="temp-styles.css" />
+    <script src="temp-app.js" defer></script>
+    <title>Temperature Converter</title>
+</head>
+<body>
+    <h1 class="heading-temp">Temperature Converter</h1>
+    <h2 class="temperature-explanation">
+      Temperature is a quantifiable way to describe how hot or cold something
+      is. It's also a measure of the average kinetic energy of a substance's
+      particles, which is the energy of movement. When particles move quickly,
+      the kinetic energy is high, and when they move slowly, the kinetic energy
+      is low. As temperature increases, so does the motion of the particles.
+    </h2>
+    <form class="celcius-farenheit">
+        <div class="celcius_to_farenheit">
+            <label for="celcius-num">Celsius</label>
+            <input id="celcius-num" type="number" /><br />
+            <label for="farenheit-num">Fahrenheit</label>
+            <input id="farenheit-num" type="number" readonly /><br />
+            <button id="submit-button" type="button">Convert Celsius to Fahrenheit</button>
+        </div>
+        <div class="farenheit_to_celcius">
+            <label for="farenheit-num-2">Fahrenheit</label>
+            <input id="farenheit-num-2" type="number" /><br />
+            <label for="celcius-num-2">Celsius</label>
+            <input id="celcius-num-2" type="number" readonly /><br />
+            <button id="submit-button-2" type="button">Convert Fahrenheit to Celsius</button>
+        </div>
+        <div class="celcius_to_kelvin">
+            <label for="celcius-num-3">Celcius</label>
+            <input id="celcius-num-3" type="number" /><br />
+            <label for="kelvin-num">Kelvin</label>
+            <input id="kelvin-num" type="number" readonly /><br />
+            <button id="submit-button-3" type="button">Convert Celcius to Kelvin</button>
+        </div>
+    </form>
+    <h1 id="display-conversion"></h1>
+</body>
+</html>

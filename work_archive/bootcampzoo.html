@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOOTCAMP ZOO</title>
+    <style>
+      body {
+        background-color: rgb(65, 34, 34);
+      }
+      .header-container {
+        position: fixed;
+        border-bottom: 5px solid black;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgb(71, 46, 46);
+      }
+      #monkey-left,
+      #dino-right {
+        width: 100px;
+        height: 70px;
+      }
+      #monkey-left {
+        float: left;
+      }
+      #dino-right {
+        float: right;
+      }
+      #bootcamp-title {
+        color: white;
+        text-align: center;
+        font-family: arial;
+      }
+      #animalselect-title {
+        color: white;
+        margin-top: 5cm;
+        font-family: arial;
+        text-align: center;
+      }
+      #button-parent-division {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 450px;
+        gap: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1cm;
+      }
+      .buttons {
+        margin-top: 1cm;
+        width: 200px;
+        height: 140px;
+        border-radius: 10px;
+        color: white;
+        font-family: arial;
+        font-size: 30px;
+        border: 2px solid black;
+        background-color: rgb(21, 21, 27);
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+      .buttons:hover {
+        color: rgb(182, 179, 179);
+      }
+      #birds-parent,
+      #nocturnal-parent,
+      #reptile-parent,
+      #safari-parent {
+        display: none;
+      }
+      #birds-parent button,
+      #nocturnal-parent button,
+      #reptile-parent button,
+      #safari-parent button {
+        margin-top: 1cm;
+        padding: 5px;
+        border-radius: 5px;
+        background-color: rgb(214, 176, 176);
+        border: 2px solid black;
+        color: white;
+        font-weight: bold;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        cursor: pointer;
+      }
+      #birds-display,
+      #nocturnal-display,
+      #reptile-display,
+      #safari-display {
+        margin-top: 3cm;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 800px;
+        gap: 50px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .birds-images img,
+      .nocturnal-images img,
+      .reptile-images img,
+      .safari-images img {
+        width: 250px;
+        height: 250px;
+        border-radius: 10px;
+      }
+      .birds-images p,
+      .hidden-images p,
+      .nocturnal-images p,
+      .hidden-images-nocturnal p,
+      .reptile-images p,
+      .hidden-reptile-images p,
+      .safari-images p,
+      .hidden-safari-images p {
+        color: white;
+        font-family: arial;
+        font-weight: bold;
+      }
+      #subtitle {
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        font-family: Arial;
+      }
+      .hidden-images,
+      .hidden-images-nocturnal,
+      .hidden-reptile-images,
+      .hidden-safari-images {
+        display: none;
+      }
+      .hidden-images img,
+      .hidden-images-nocturnal img,
+      .hidden-reptile-images img,
+      .hidden-safari-images img {
+        width: 250px;
+        height: 250px;
+        border-radius: 10px;
+      }
+      #bootcamp-title a {
+        color: white;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header-container">
+      <img id="monkey-left" src="./bootcampzoo_images/monkey_left.avif" />
+      <img id="dino-right" src="./bootcampzoo_images/dino-right.jpg" />
+      <h1 id="bootcamp-title"><a href="bootcampzoo.html">BOOTCAMP ZOO</a></h1>
+      <p id="subtitle"></p>
+    </div>
+    <div class="parent">
+      <div id="animalselect-title">
+        <h1>Choose your favourite animal</h1>
+      </div>
+      <div id="button-parent-division">
+        <button onclick="animalBirds()" class="buttons">Birds</button>
+        <button onclick="nocturnals()" class="buttons">Nocturnal</button>
+        <button onclick="safari()" class="buttons">Safari</button>
+        <button onclick="reptiles()" class="buttons">Reptiles</button>
+      </div>
+    </div>
+    <div id="birds-parent">
+      <div id="birds-display">
+        <div class="birds-images">
+          <p>American Goldenfish</p>
+          <img
+            src="./bootcampzoo_images/american-goldenfish.avif"
+            alt="American Goldenfish"
+          />
+        </div>
+        <div class="birds-images">
+          <p>Bald Eagle</p>
+          <img src="./bootcampzoo_images/bald-eagle.jpeg" alt="Bald Eagle" />
+        </div>
+        <div class="birds-images">
+          <p>Brown Thrasher</p>
+          <img
+            src="./bootcampzoo_images/brown-trasher.avif"
+            alt="Brown Thrasher"
+          />
+        </div>
+        <div class="birds-images">
+          <p>Eastern Bluebird</p>
+          <img src="./bootcampzoo_images/bluebird.jpg" alt="Eastern Bluebird" />
+        </div>
+        <div class="hidden-images">
+          <p>Western Bluebird</p>
+          <img
+            src="./bootcampzoo_images/western-bluebird.jpg"
+            alt="Western Bluebird"
+          />
+        </div>
+        <div class="hidden-images">
+          <p>Flamingo</p>
+          <img src="./bootcampzoo_images/flamingo.webp" alt="Flamingo" />
+        </div>
+      </div>
+      <button
+        id="birds-button"
+        onclick="readmoreFunction('hidden-images', 'birds-button')"
+      >
+        Show More
+      </button>
+    </div>
+    <div id="nocturnal-parent">
+      <div id="nocturnal-display">
+        <div class="nocturnal-images">
+          <p>Snowy Owl</p>
+          <img src="./bootcampzoo_images/snowy-owl.png" alt="Snowy Owl" />
+        </div>
+        <div class="nocturnal-images">
+          <p>Bats</p>
+          <img src="./bootcampzoo_images/bats.jpeg" alt="Bats" />
+        </div>
+        <div class="nocturnal-images">
+          <p>Coyote</p>
+          <img src="./bootcampzoo_images/coyote.jpeg" alt="Coyote" />
+        </div>
+        <div class="nocturnal-images">
+          <p>Lynx</p>
+          <img src="./bootcampzoo_images/lynx.jpeg" alt="Lynx" />
+        </div>
+        <div class="hidden-images-nocturnal">
+          <p>Raccoon</p>
+          <img src="./bootcampzoo_images/raccoon.jpeg" alt="Raccoon" />
+        </div>
+        <div class="hidden-images-nocturnal">
+          <p>Hyena</p>
+          <img src="./bootcampzoo_images/hyena.jpeg" alt="Hyena" />
+        </div>
+      </div>
+      <button
+        id="nocturnal-button"
+        onclick="readmoreFunction('hidden-images-nocturnal', 'nocturnal-button')"
+      >
+        Show More
+      </button>
+    </div>
+    <div id="safari-parent">
+      <div id="safari-display">
+        <div class="safari-images">
+          <p>Lion</p>
+          <img src="./bootcampzoo_images/lion.jpeg" alt="Lion" />
+        </div>
+        <div class="safari-images">
+          <p>Giraffe</p>
+          <img src="./bootcampzoo_images/giraffe.jpeg" alt="Giraffe" />
+        </div>
+        <div class="safari-images">
+          <p>Gorilla</p>
+          <img src="./bootcampzoo_images/gorilla.jpeg" alt="Gorilla" />
+        </div>
+        <div class="safari-images">
+          <p>Penguin</p>
+          <img src="./bootcampzoo_images/penguin.jpeg" alt="Penguin" />
+        </div>
+        <div class="hidden-safari-images">
+          <p>Zebra</p>
+          <img src="./bootcampzoo_images/zebra.jpeg" alt="Zebra" />
+        </div>
+        <div class="hidden-safari-images">
+          <p>Tiger</p>
+          <img src="./bootcampzoo_images/tiger.jpeg" alt="Tiger" />
+        </div>
+      </div>
+      <button
+        id="safari-button"
+        onclick="readmoreFunction('hidden-safari-images', 'safari-button')"
+      >
+        Show More
+      </button>
+    </div>
+    <div id="reptile-parent">
+      <div id="reptile-display">
+        <div class="reptile-images">
+          <p>Snake</p>
+          <img src="./bootcampzoo_images/snake.jpeg" alt="Snake" />
+        </div>
+        <div class="reptile-images">
+          <p>Crocodile</p>
+          <img src="./bootcampzoo_images/crocodile.jpeg" alt="Crocodile" />
+        </div>
+        <div class="reptile-images">
+          <p>Chameleon</p>
+          <img src="./bootcampzoo_images/chameleon.jpeg" alt="Chameleon" />
+        </div>
+        <div class="reptile-images">
+          <p>Turtle</p>
+          <img src="./bootcampzoo_images/turtle.jpeg" alt="Turtle" />
+        </div>
+        <div class="hidden-reptile-images">
+          <p>Alligator</p>
+          <img src="./bootcampzoo_images/alligator.jpeg" alt="Alligator" />
+        </div>
+        <div class="hidden-reptile-images">
+          <p>Iguana</p>
+          <img src="./bootcampzoo_images/iguana.jpeg" alt="Iguana" />
+        </div>
+      </div>
+      <button
+        id="reptile-button"
+        onclick="readmoreFunction('hidden-reptile-images', 'reptile-button')"
+      >
+        Show More
+      </button>
+    </div>
+  </body>
+  <script>
+    function hideElements(elementID) {
+      document.getElementById(elementID).style.display = "none";
+    }
+    function readmoreFunction(animalsClass, buttonID) {
+      var hiddenImages = document.getElementsByClassName(animalsClass);
+      var buttonsReadMore = document.getElementById(buttonID);
+
+      for (var i = 0; i < hiddenImages.length; i++) {
+        if (
+          hiddenImages[i].style.display === "none" ||
+          hiddenImages[i].style.display === ""
+        ) {
+          hiddenImages[i].style.display = "block";
+          buttonsReadMore.textContent = "Show Less";
+        } else {
+          hiddenImages[i].style.display = "none";
+          buttonsReadMore.textContent = "Show More";
+        }
+      }
+    }
+
+    function animalBirds() {
+      var birdsDisplay = document.getElementById("birds-parent");
+      var subtitle = document.getElementById("subtitle");
+      if (birdsDisplay.style.display === "block") {
+        birdsDisplay.style.display = "none";
+      } else {
+        birdsDisplay.style.display = "block";
+        subtitle.textContent = "Birds";
+      }
+      hideElements("animalselect-title");
+      hideElements("button-parent-division");
+      hideElements("nocturnal-parent");
+      hideElements("reptile-parent");
+      hideElements("safari-parent");
+    }
+
+    function nocturnals() {
+      var nocturnalsDisplay = document.getElementById("nocturnal-parent");
+      var subtitle = document.getElementById("subtitle");
+      if (nocturnalsDisplay.style.display === "block") {
+        nocturnalsDisplay.style.display = "none";
+      } else {
+        nocturnalsDisplay.style.display = "block";
+        subtitle.textContent = "Nocturnals";
+      }
+      hideElements("animalselect-title");
+      hideElements("button-parent-division");
+      hideElements("birds-parent");
+      hideElements("reptile-parent");
+      hideElements("safari-parent");
+    }
+    function reptiles() {
+      var nocturnalsDisplay = document.getElementById("reptile-parent");
+      var subtitle = document.getElementById("subtitle");
+      if (nocturnalsDisplay.style.display === "block") {
+        nocturnalsDisplay.style.display = "none";
+      } else {
+        nocturnalsDisplay.style.display = "block";
+        subtitle.textContent = "Reptiles";
+      }
+      hideElements("animalselect-title");
+      hideElements("button-parent-division");
+      hideElements("birds-parent");
+      hideElements("nocturnal-parent");
+      hideElements("safari-parent");
+    }
+    function safari() {
+      var nocturnalsDisplay = document.getElementById("safari-parent");
+      var subtitle = document.getElementById("subtitle");
+      if (nocturnalsDisplay.style.display === "block") {
+        nocturnalsDisplay.style.display = "none";
+      } else {
+        nocturnalsDisplay.style.display = "block";
+        subtitle.textContent = "Safari";
+      }
+      hideElements("animalselect-title");
+      hideElements("button-parent-division");
+      hideElements("birds-parent");
+      hideElements("nocturnal-parent");
+      hideElements("reptile-parent");
+    }
+  </script>
+</html>

@@ -1,0 +1,154 @@
+.atm-heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.left-image{
+    transition: 0.5s;
+    margin-right: 1cm;
+}
+.right-image{
+    margin-left: 1cm;
+}
+#atm-title {
+    color: rgb(25, 25, 69);
+    font-family: 'arial';
+    transition: 0.3s;
+    font-size: 48px;
+    
+}
+#atm-title:hover{
+    color: black;
+}
+.ATM-body{
+ border: 2px solid black;
+ height: 700px;
+}
+.machineTitle{
+    text-align: center;
+    border-bottom: 2px solid black;
+    font-family: Arial;
+    font-size: 48px;
+}
+.ATM-screen{
+    display: flex;
+    margin: auto;
+    height: 20px;
+    width: 600px;
+    height: 400px;
+    border: 2px solid rgb(14, 2, 54);
+
+}
+.ATM-buttons{
+    border-top: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+.ATM-buttons button{
+    width: 120px;
+    height: 50px;
+    margin-top: 1.5cm;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: rgb(0, 0, 19);
+    border-radius: 10px;
+}
+.ATM-buttons a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.withdraw-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.withdraw-container label{
+    font-family: Arial;
+    font-weight: bold;
+}
+.withdraw-container button, input{
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+.withdraw-container button:focus{
+    border: 2px solid rgb(140, 140, 196);
+}
+#show-denominations{
+    margin-top: 1cm;
+}
+.withdraw-container p{
+    font-family: Arial;
+}
+.login-body{
+    font-family: Arial;
+}
+.login-form{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5cm;
+}
+.login-body label{
+    font-weight: bold;
+    color: black;
+}
+.login-form button{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+.login-form button:focus{
+    border: 2px solid cyan;
+}
+.balance-container{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+#user-balance{
+    font-family: Arial;
+    font-size: 18px;
+}
+.balance-container button, #display-button{
+    padding: 10px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.balance-container button:focus{
+    border: 2px solid cyan;
+}
+.deposit-screen{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3cm;
+}
+.deposit-screen input{
+    padding: 10px;
+}
+.deposit-screen button{
+    margin-top: 1cm;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+.deposit-screen button:focus{
+    border: 2px solid cyan;
+}
+#deposit{
+    font-family: Arial;
+}
