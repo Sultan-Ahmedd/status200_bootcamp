@@ -1,6 +1,6 @@
 # Status200 Bootcamp
 
-Welcome to the Status200 Bootcamp repository! This repository contains the code and resources for the Status200 Bootcamp, a comprehensive program designed to enhance your skills in web development and software engineering.
+Welcome to the my Status200 Bootcamp repository! This repository contains the code and resources for the Status200 Bootcamp, a comprehensive program designed to enhance your skills in web development and software engineering.
 
 ## Overview
 
@@ -23,3 +23,7 @@ Ensure you have the following installed on your machine:
 - [Git](https://git-scm.com/)
 - [Node.js](https://nodejs.org/) (if applicable)
 - [Python](https://www.python.org/) (if applicable)
+
+### Student
+
+- This repository documents Sultan Ahmed's work from the beginning of Stage 2 of the bootcamp to its completion as a reminder of the journey.
